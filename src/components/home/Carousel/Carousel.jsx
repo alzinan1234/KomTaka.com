@@ -7,17 +7,17 @@ const slides = [
   {
     title: "Delicious Food",
     description: "Savor the taste of our exquisite dishes made with love.",
-    image: "/banner-img.jpg", // Ensure this is in /public folder
+    image: "/image/banner/banner1.jpg", // Ensure this is in /public folder
   },
   {
     title: "Fresh Ingredients",
     description: "Only the freshest ingredients go into our meals.",
-    image: "/banner-img.jpg",
+    image: "/image/banner/banner2.jpg",
   },
   {
     title: "Cozy Ambiance",
     description: "Enjoy your meal in a warm and welcoming environment.",
-    image: "/banner-img.jpg",
+    image: "/image/banner/banner3.jpg",
   },
 ];
 
@@ -66,7 +66,7 @@ const Banner = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full"
               />
 
               {/* Black Overlay */}

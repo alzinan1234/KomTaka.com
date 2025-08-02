@@ -1,7 +1,11 @@
 import Carousel from "@/components/home/Carousel/Carousel";
+import ProductCard from "@/components/home/FashionTrend/ProductCard";
+
+
 import FlashSalesSlider from "@/components/home/FlashSales/FlashSalesSlider";
+import NewArrival from "@/components/home/NewArrival/NewArrival";
 import ScrollingBanner from "@/components/home/ScrollingBanner/ScrollingBanner";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -9,6 +13,9 @@ export default function Home() {
       <Carousel />
       <ScrollingBanner/>
       <FlashSalesSlider/>
+      <ProductCard/>
+
+      <NewArrival/>
     </div>
   );
 }
