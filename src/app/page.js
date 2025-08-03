@@ -16,10 +16,8 @@ export default function Home() {
       <ScrollingBanner/>
       <FlashSalesSlider/>
       <ProductCard/>
-
       <NewArrival/>
       <BestDeal/>
-
       <FeaturesSection/>
       
     </div>

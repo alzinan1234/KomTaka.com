@@ -1,7 +1,13 @@
+"use client";
 import React from "react";
 import { X } from "lucide-react";
+import { useCart } from "./CartContext";
+ // 1. Import hook
 
 const Cart = ({ isCartOpen, toggleCart }) => {
+  // 2. Get all state and functions from the context
+  const { cartItems, removeFromCart, updateQuantity, clearCart, subtotal, total } = useCart();
+
   return (
     <>
       {/* Background Blur Overlay */}
@@ -20,44 +26,56 @@ const Cart = ({ isCartOpen, toggleCart }) => {
       >
         {/* Header */}
         <div className="flex justify-between items-center p-4 border-b">
-          <h2 className="font-bold text-lg">Your Cart</h2>
+          <h2 className="font-bold text-lg">Your Cart ({cartItems.length})</h2>
           <button onClick={toggleCart}>
             <X className="text-black w-6 h-6" />
           </button>
         </div>
 
-        {/* Items */}
+        {/* 3. Make Items dynamic */}
         <div className="p-4 space-y-4 h-[calc(100%-220px)] overflow-y-auto">
-          {[1, 2].map((_, idx) => (
-            <div key={idx} className="flex gap-3 items-center border rounded-md p-2">
-              <img
-                src="/product.webp"
-                alt="Product"
-                className="w-16 h-16 rounded-md object-cover"
-              />
-              <div className="flex-1">
-                <p className="text-sm font-medium">Product {idx + 1}</p>
-                <div className="flex items-center gap-2 mt-1">
-                  <select className="border rounded px-1 text-sm">
-                    {[1, 2, 3, 4].map((qty) => (
-                      <option key={qty}>{qty}</option>
-                    ))}
-                  </select>
-                  <span className="font-semibold text-sm">৳580</span>
-                </div>
-              </div>
-              <button>
-                <X className="w-4 h-4 text-gray-500" />
-              </button>
+          {cartItems.length === 0 ? (
+            <div className="flex items-center justify-center h-full">
+              <p className="text-gray-500">Your cart is empty.</p>
             </div>
-          ))}
+          ) : (
+            cartItems.map((item) => (
+              <div key={item.id} className="flex gap-3 items-center border rounded-md p-2">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-16 h-16 rounded-md object-cover"
+                />
+                <div className="flex-1">
+                  <p className="text-sm font-medium truncate">{item.name}</p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <select
+                      className="border rounded px-1 text-sm"
+                      value={item.quantity}
+                      onChange={(e) => updateQuantity(item.id, e.target.value)}
+                    >
+                      {[...Array(10).keys()].map((qty) => (
+                        <option key={qty + 1} value={qty + 1}>
+                          {qty + 1}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="font-semibold text-sm">৳{item.price}</span>
+                  </div>
+                </div>
+                <button onClick={() => removeFromCart(item.id)}>
+                  <X className="w-4 h-4 text-gray-500 hover:text-red-500 transition-colors" />
+                </button>
+              </div>
+            ))
+          )}
         </div>
 
-        {/* Footer */}
+        {/* 4. Make Footer dynamic */}
         <div className="absolute bottom-0 left-0 w-full p-4 border-t bg-white space-y-2">
           <div className="flex justify-between text-sm">
             <span>Subtotal:</span>
-            <span>$1750</span>
+            <span>৳{subtotal.toFixed(2)}</span>
           </div>
           <div className="flex justify-between text-sm">
             <span>Shipping:</span>
@@ -65,11 +83,15 @@ const Cart = ({ isCartOpen, toggleCart }) => {
           </div>
           <div className="flex justify-between font-bold text-base mt-2">
             <span>Total:</span>
-            <span>$1750</span>
+            <span>৳{total.toFixed(2)}</span>
           </div>
-
           <div className="flex gap-2 mt-4">
-            <button className="w-full border rounded px-4 py-2 hover:bg-gray-100 transition">Reset</button>
+            <button
+              onClick={clearCart}
+              className="w-full border rounded px-4 py-2 hover:bg-gray-100 transition"
+            >
+              Reset
+            </button>
             <button className="w-full bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 transition">
               Checkout
             </button>
