@@ -55,7 +55,7 @@ const BestDeal = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl font-sans">
+    <div className="maxWidth mx-auto px-4 py-8 max-w-7xl font-sans">
       <div className="relative w-full rounded-2xl overflow-hidden shadow-lg">
         {/* Slider container */}
         <div className="relative w-full h-[400px] flex transition-transform duration-700 ease-in-out"
