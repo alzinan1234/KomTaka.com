@@ -208,7 +208,7 @@ const ProductCard = () => {
       </div>
 
       {/* Product grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center justify-center ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-center justify-center ">
         {filteredProducts.map((product) => (
           <div
             key={product.id}
@@ -238,7 +238,7 @@ const ProductCard = () => {
                 }}
               />
               
-              {/* Add to Cart button that appears on hover */}
+           
               <button
                 className="absolute bottom-0 left-0 w-full bg-blue-600 text-white py-2 
                   translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 

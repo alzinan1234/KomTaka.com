@@ -1,3 +1,4 @@
+import BestDeal from "@/components/home/BestDeal/BestDeal";
 import Carousel from "@/components/home/Carousel/Carousel";
 import ProductCard from "@/components/home/FashionTrend/ProductCard";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <ProductCard/>
 
       <NewArrival/>
+      <BestDeal/>
     </div>
   );
 }
