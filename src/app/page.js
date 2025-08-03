@@ -1,6 +1,7 @@
 import BestDeal from "@/components/home/BestDeal/BestDeal";
 import Carousel from "@/components/home/Carousel/Carousel";
 import ProductCard from "@/components/home/FashionTrend/ProductCard";
+import FeaturesSection from "@/components/home/FeaturesSection/FeaturesSection";
 
 
 import FlashSalesSlider from "@/components/home/FlashSales/FlashSalesSlider";
@@ -18,6 +19,9 @@ export default function Home() {
 
       <NewArrival/>
       <BestDeal/>
+
+      <FeaturesSection/>
+      
     </div>
   );
 }
