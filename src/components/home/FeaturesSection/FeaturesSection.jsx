@@ -3,14 +3,14 @@ import React from 'react';
 // SVG Icon for Delivery Truck
 const DeliveryIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
-  <g clip-path="url(#clip0_29_1274)">
-    <path d="M12.1663 31.6667C14.0073 31.6667 15.4997 30.1743 15.4997 28.3333C15.4997 26.4924 14.0073 25 12.1663 25C10.3254 25 8.83301 26.4924 8.83301 28.3333C8.83301 30.1743 10.3254 31.6667 12.1663 31.6667Z" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M28.8333 31.6667C30.6743 31.6667 32.1667 30.1743 32.1667 28.3333C32.1667 26.4924 30.6743 25 28.8333 25C26.9924 25 25.5 26.4924 25.5 28.3333C25.5 30.1743 26.9924 31.6667 28.8333 31.6667Z" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.83301 28.334H7.49967C6.3951 28.334 5.49967 27.4386 5.49967 26.334V21.6673M3.83301 8.33398H20.1663C21.2709 8.33398 22.1663 9.22941 22.1663 10.334V28.334M15.4997 28.334H25.4997M32.1663 28.334H33.4997C34.6042 28.334 35.4997 27.4386 35.4997 26.334V18.334M35.4997 18.334H22.1663M35.4997 18.334L31.0823 10.9717C30.7208 10.3692 30.0698 10.0007 29.3673 10.0007H22.1663" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.5 28H7.16667C6.0621 28 5.16667 27.1046 5.16667 26V21.3333M3.5 8H19.8333C20.9379 8 21.8333 8.89543 21.8333 10V28M15.5 28H25.1667M32.5 28H33.1667C34.2712 28 35.1667 27.1046 35.1667 26V18M35.1667 18H21.8333M35.1667 18L30.7493 10.6377C30.3878 10.0353 29.7368 9.66667 29.0343 9.66667H21.8333" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M5.5 11.8184H12.1667" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M2.31836 15.4541H8.98503" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M5.5 19.0908H12.1667" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g clipPath="url(#clip0_29_1274)">
+    <path d="M12.1663 31.6667C14.0073 31.6667 15.4997 30.1743 15.4997 28.3333C15.4997 26.4924 14.0073 25 12.1663 25C10.3254 25 8.83301 26.4924 8.83301 28.3333C8.83301 30.1743 10.3254 31.6667 12.1663 31.6667Z" stroke="#FAFAFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M28.8333 31.6667C30.6743 31.6667 32.1667 30.1743 32.1667 28.3333C32.1667 26.4924 30.6743 25 28.8333 25C26.9924 25 25.5 26.4924 25.5 28.3333C25.5 30.1743 26.9924 31.6667 28.8333 31.6667Z" stroke="#FAFAFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M8.83301 28.334H7.49967C6.3951 28.334 5.49967 27.4386 5.49967 26.334V21.6673M3.83301 8.33398H20.1663C21.2709 8.33398 22.1663 9.22941 22.1663 10.334V28.334M15.4997 28.334H25.4997M32.1663 28.334H33.4997C34.6042 28.334 35.4997 27.4386 35.4997 26.334V18.334M35.4997 18.334H22.1663M35.4997 18.334L31.0823 10.9717C30.7208 10.3692 30.0698 10.0007 29.3673 10.0007H22.1663" stroke="#FAFAFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M8.5 28H7.16667C6.0621 28 5.16667 27.1046 5.16667 26V21.3333M3.5 8H19.8333C20.9379 8 21.8333 8.89543 21.8333 10V28M15.5 28H25.1667M32.5 28H33.1667C34.2712 28 35.1667 27.1046 35.1667 26V18M35.1667 18H21.8333M35.1667 18L30.7493 10.6377C30.3878 10.0353 29.7368 9.66667 29.0343 9.66667H21.8333" stroke="#FAFAFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M5.5 11.8184H12.1667" stroke="#FAFAFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M2.31836 15.4541H8.98503" stroke="#FAFAFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M5.5 19.0908H12.1667" stroke="#FAFAFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </g>
   <defs>
     <clipPath id="clip0_29_1274">
@@ -23,11 +23,11 @@ const DeliveryIcon = () => (
 // SVG Icon for Customer Service (Headphones)
 const ServiceIcon = () => (
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-  <g clip-path="url(#clip0_29_1291)">
-    <path d="M13.3337 25.0003C13.3337 23.1594 11.8413 21.667 10.0003 21.667C8.15938 21.667 6.66699 23.1594 6.66699 25.0003V28.3337C6.66699 30.1746 8.15938 31.667 10.0003 31.667C11.8413 31.667 13.3337 30.1746 13.3337 28.3337V25.0003Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M33.3337 25.0003C33.3337 23.1594 31.8413 21.667 30.0003 21.667C28.1594 21.667 26.667 23.1594 26.667 25.0003V28.3337C26.667 30.1746 28.1594 31.667 30.0003 31.667C31.8413 31.667 33.3337 30.1746 33.3337 28.3337V25.0003Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M6.66699 25.0003V20.0003C6.66699 16.4641 8.07175 13.0727 10.5722 10.5722C13.0727 8.07175 16.4641 6.66699 20.0003 6.66699C23.5365 6.66699 26.9279 8.07175 29.4284 10.5722C31.9289 13.0727 33.3337 16.4641 33.3337 20.0003V25.0003" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M30 31.667C30 32.9931 28.9464 34.2648 27.0711 35.2025C25.1957 36.1402 22.6522 36.667 20 36.667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g clipPath="url(#clip0_29_1291)">
+    <path d="M13.3337 25.0003C13.3337 23.1594 11.8413 21.667 10.0003 21.667C8.15938 21.667 6.66699 23.1594 6.66699 25.0003V28.3337C6.66699 30.1746 8.15938 31.667 10.0003 31.667C11.8413 31.667 13.3337 30.1746 13.3337 28.3337V25.0003Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M33.3337 25.0003C33.3337 23.1594 31.8413 21.667 30.0003 21.667C28.1594 21.667 26.667 23.1594 26.667 25.0003V28.3337C26.667 30.1746 28.1594 31.667 30.0003 31.667C31.8413 31.667 33.3337 30.1746 33.3337 28.3337V25.0003Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M6.66699 25.0003V20.0003C6.66699 16.4641 8.07175 13.0727 10.5722 10.5722C13.0727 8.07175 16.4641 6.66699 20.0003 6.66699C23.5365 6.66699 26.9279 8.07175 29.4284 10.5722C31.9289 13.0727 33.3337 16.4641 33.3337 20.0003V25.0003" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M30 31.667C30 32.9931 28.9464 34.2648 27.0711 35.2025C25.1957 36.1402 22.6522 36.667 20 36.667" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </g>
   <defs>
     <clipPath id="clip0_29_1291">

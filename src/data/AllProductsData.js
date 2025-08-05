@@ -1,5 +1,3 @@
-export const categories = ["All", "Top Selling", "Trending Item", "Gadget", "Fashion", "Accessories"];
-
 // data/products.js
 const allProducts = [
     {
