@@ -3,6 +3,7 @@
 import { Heart, Eye, Star } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { useCart } from '../home/Cart/CartContext';
+import Link from 'next/link';
 
 
 const ProductCard = ({ product }) => {
@@ -58,7 +59,9 @@ const ProductCard = ({ product }) => {
             </div>
             
             <div className="p-4 flex flex-col items-center text-center">
-                <h3 className="text-lg font-semibold text-gray-800 mb-1 truncate">{product.name}</h3>
+                <Link href={`/product/${product.id}`}>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-1 truncate w-full">{product.name}</h3>
+                </Link>
                 <div className="flex items-center space-x-2 mb-2">
                     <span className="text-blue-600 font-bold">৳{product.price}</span>
                     <span className="text-gray-400 line-through">৳{product.originalPrice}</span>

@@ -6,6 +6,7 @@ import { Star, Heart, Eye, ArrowRight } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { useCart } from '../Cart/CartContext';
 import allProducts from '@/data/AllProductsData';
+import Link from 'next/link';
 
 // 1. Import the new product data
 
@@ -107,7 +108,7 @@ const ProductCard = () => {
                         </div>
                         
                         <div className="p-4 flex flex-col items-center flex-grow">
-                            <h3 className="text-lg font-semibold text-center text-gray-800 mb-1 truncate w-full">{product.name}</h3>
+                           <Link href={`/product/${product.id}`}> <h3 className="text-lg font-semibold text-center text-gray-800 mb-1 truncate w-full">{product.name}</h3></Link>
                             <div className="flex items-center space-x-2 mb-2">
                                 <span className="text-blue-600 font-bold">৳{product.price.toFixed(2)}</span>
                                 {product.originalPrice && (
