@@ -54,7 +54,7 @@ const ProductCard = () => {
                                 px-6 py-2 rounded-lg font-semibold transition-all duration-300
                                 ${activeFilter === category
                                     ? 'bg-blue-600 text-white shadow-lg'
-                                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                                    : 'bg-[#F5F5F5] text-gray-700 hover:bg-gray-100'
                                 }
                             `}
                         >
@@ -64,7 +64,7 @@ const ProductCard = () => {
                 </div>
                 <button 
                     onClick={() => setActiveFilter('All')} 
-                    className="flex items-center space-x-2 px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition-colors duration-300"
+                    className="flex items-center space-x-2 px-6 py-2 rounded-lg bg-black text-white  hover:bg-gray-700 transition-colors duration-300"
                 >
                     <span>VIEW ALL</span>
                     <ArrowRight size={20} />

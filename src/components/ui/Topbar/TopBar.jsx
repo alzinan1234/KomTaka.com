@@ -8,7 +8,7 @@ const TopBar = () => {
   return (
     <>
       <div className="bg-black text-white">
-        <div className="maxWidth mx-auto  py-2 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between text-sm">
+        <div className="maxWidth mx-auto  py-2  flex flex-col md:flex-row items-center justify-between text-sm">
           {/* Left Section: Contact Information */}
           <div className="   flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-6 mb-2 md:mb-0">
             <div className="flex items-center">

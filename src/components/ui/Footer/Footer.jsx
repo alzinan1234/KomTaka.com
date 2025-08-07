@@ -41,7 +41,7 @@ export default function Footer() {
 
       {/* Footer Component */}
       <footer className="bg-black text-white ">
-        <div className="container mx-auto pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+        <div className="maxWidth mx-auto pt-16 pb-8 ">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
 
             {/* Column 1: Exclusive */}

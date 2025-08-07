@@ -55,7 +55,10 @@ const FlashSalesSlider = () => {
     return (
         <div className="max-w-7xl mx-auto px-4 py-8 font-sans">
             <div className="flex items-center justify-between mb-8">
-                <h2 className="text-3xl font-bold text-gray-800">Flash Sales</h2>
+                 <div className="">
+        <p className="text-blue-600 font-semibold mb-5">Today’s</p>
+        <h2 className="text-4xl font-bold text-gray-900">Flash Sales</h2>
+      </div>
                 <div className="flex space-x-2">
                     <button onClick={prevSlide} className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors duration-200">
                         <ChevronLeft className="h-6 w-6 text-gray-700" />
