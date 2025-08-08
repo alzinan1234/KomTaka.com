@@ -3,6 +3,7 @@ import React from "react";
 
 // You might need to install lucide-react for icons: npm install lucide-react
 import { ChevronDown, User } from "lucide-react";
+import Link from "next/link";
 
 const TopBar = () => {
   return (
@@ -50,24 +51,24 @@ const TopBar = () => {
             {/* Separator */}
             <span className="hidden md:block text-gray-600">|</span>
 
-            {/* Sign In Link */}
-            <a
-              href="/signin"
-              className="hover:text-gray-300 transition-colors duration-200"
-            >
-              SIGN IN
-            </a>
+        {/* Sign In Link */}
+        <Link
+          href="/login"
+          className="hover:text-gray-300 transition-colors duration-200"
+        >
+          SIGN IN
+        </Link>
 
             {/* Separator */}
             <span className="hidden md:block text-gray-600">|</span>
 
             {/* Sign Up Link */}
-            <a
-              href="/signup"
-              className="hover:text-gray-300 transition-colors duration-200"
-            >
-              SIGN UP
-            </a>
+        <Link
+          href="/registration"
+          className="hover:text-gray-300 transition-colors duration-200"
+        >
+          SIGN UP
+        </Link>
 
             {/* Separator */}
             <span className="hidden md:block text-gray-600">|</span>
