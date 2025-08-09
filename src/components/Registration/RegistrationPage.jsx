@@ -293,7 +293,7 @@ const RegistrationPage = () => {
                     Select Your Gender
                     <span className="text-red-400 font-[700]">*</span>
                   </label>
-                  <div className="flex gap-4">
+                  <div className="md:flex gap-4">
                     {["Male", "Female", "Others"].map((gender) => (
                       <label
                         key={gender}
