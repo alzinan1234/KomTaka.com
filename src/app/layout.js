@@ -2,9 +2,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/ui/Topbar/TopBar";
 import Navbar from "@/components/ui/Navbar/Navbar";
-import Footer from "@/components/ui/Footer/Footer";
+import Footer from "@/components/ui/Footer/Footer"; // Your original footer
+ // The new mobile footer
 import { CartProvider } from "@/components/home/Cart/CartContext";
 import { Toaster } from "react-hot-toast";
+import MobileFooter from "@/components/ui/MobileFooter/MobileFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,14 +28,23 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > 
-
-      <CartProvider>
+      >
+        <CartProvider>
           <Toaster position="top-center" reverseOrder={false} />
-        <TopBar />
-        <Navbar />
-        {children}
-        <Footer />
+          <TopBar />
+          <Navbar />
+
+          {/* Add padding to the bottom on mobile to make space for the fixed footer */}
+          <main className="pb-20 md:pb-0">{children}</main>
+
+          {/* Original footer for medium screens and up */}
+          <div className="hidden md:block">
+            <Footer />
+          </div>
+
+          {/* New mobile footer for small screens */}
+          <MobileFooter />
+          
         </CartProvider>
       </body>
     </html>

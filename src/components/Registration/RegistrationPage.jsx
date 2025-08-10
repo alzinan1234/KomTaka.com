@@ -283,7 +283,7 @@ const RegistrationPage = () => {
                     placeholder="018248XXXXX"
                     required
                   />
-                </div>
+                </div>C
 
                 <div className="bg-white rounded-lg">
                   <label
