@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="maxWidth mx-auto flex items-center justify-between h-16 px-4">
+      <div className="maxWidth mx-auto flex items-center justify-between h-16 ">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
@@ -110,7 +110,7 @@ const Navbar = () => {
         className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden border-t border-gray-200`}
         style={{
           maxHeight: isSearchOpen ? "80px" : "0px",
-          backgroundColor: "#fff",
+          // backgroundColor: "#000",
         }}
       >
         <div className="px-4 py-2">

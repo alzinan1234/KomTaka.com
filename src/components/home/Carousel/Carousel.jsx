@@ -8,17 +8,17 @@ const slides = [
   {
     title: "Delicious Food",
     // description: "Savor the taste of our exquisite dishes made with love.",
-    image: "/image/banner/banner1 (2).jpg", // Ensure this is in /public folder
+    image: "/image/banner/banner2 (2).jpg", // Ensure this is in /public folder
   },
   {
     title: "Fresh Ingredients",
     // description: "Only the freshest ingredients go into our meals.",
-    image: "/image/banner/banner2.jpg",
+    image: "/image/banner/banner2 (2).jpg",
   },
   {
     title: "Cozy Ambiance",
     // description: "Enjoy your meal in a warm and welcoming environment.",
-    image: "/image/banner/banner3.jpg",
+    image: "/image/banner/banner2 (2).jpg",
   },
 ];
 
@@ -58,7 +58,7 @@ const Banner = () => {
   }, [emblaApi]);
 
   return (
-    <div className="relative overflow-hidden w-full h-[40vh] md:h-[60vh]">
+    <div className="relative overflow-hidden w-full h-[30vh]  md:h-[60vh]">
       <div
         className="embla__viewport w-full h-full"
         ref={emblaRef}
@@ -79,7 +79,7 @@ const Banner = () => {
               />
 
               {/* Black Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+              <div className="absolute inset-0  bg-opacity-100"></div>
 
               {/* Content */}
               {/* <div className="relative z-10 w-full h-full flex items-center justify-center p-4 text-center text-white">

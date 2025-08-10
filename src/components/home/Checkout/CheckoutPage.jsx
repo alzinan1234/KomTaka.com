@@ -136,11 +136,11 @@ const CheckoutPage = () => {
                 <div className="flex items-center border border-gray-200 rounded-md p-3">
                   <input id="bank" name="paymentMethod" type="radio" value="bank" checked={paymentMethod === 'bank'} onChange={(e) => setPaymentMethod(e.target.value)} className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"/>
                   <label htmlFor="bank" className="ml-3 block text-sm font-medium text-gray-700">Bank</label>
-                  <div className="ml-auto flex space-x-2">
-                      <img src="https://i.ibb.co/L5Fp1d1/bkash.png" alt="bKash" className="h-5"/>
-                      <img src="https://i.ibb.co/P9WpY8x/visa.png" alt="Visa" className="h-5"/>
-                      <img src="https://i.ibb.co/hK2rwcR/mastercard.png" alt="Mastercard" className="h-5"/>
-                      <img src="https://i.ibb.co/tZMRk5d/nagad.png" alt="Nagad" className="h-5"/>
+                  <div className="ml-auto flex space-x-3 items-center">
+                      <img src="/payment/image 32.png" alt="bKash" className="h-5"/>
+                      <img src="/payment/Nagad.png" alt="Visa" className="h-5"/>
+                      <img src="/payment/image 31.png" alt="Mastercard" className="h-5"/>
+                      <img src="/payment/image 30.png" alt="Nagad" className="h-3"/>
                   </div>
                 </div>
                  <div className="flex items-center border border-gray-200 rounded-md p-3">
@@ -152,7 +152,7 @@ const CheckoutPage = () => {
             {/* Coupon and Place Order */}
             <div className="flex items-center gap-4">
                 <input type="text" placeholder="Coupon Code" className="w-full p-2 border border-gray-300 rounded-md shadow-sm bg-gray-50 focus:ring-blue-500 focus:border-blue-500"/>
-                <button type="button" className="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Apply Coupon</button>
+                <button type="button" className="px-6 py-3 text-[14px] w-full font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Apply Coupon</button>
             </div>
             <button type="submit" className="w-full bg-blue-600 text-white rounded-lg px-4 py-3 text-sm font-semibold hover:bg-blue-700 transition shadow-sm">
                 Place Order

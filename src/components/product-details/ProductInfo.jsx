@@ -109,7 +109,22 @@ const ProductInfo = ({ product }) => {
 
             <div className="border border-gray-200 rounded-md p-4 mb-6">
                 <div className="flex items-center mb-2">
-                    <img src="https://placehold.co/24x24/e5e7eb/374151?text=🚚" alt="Free Delivery Icon" className="mr-2" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  <g clip-path="url(#clip0_1_4752)">
+    <path d="M11.6663 31.6667C13.5073 31.6667 14.9997 30.1743 14.9997 28.3333C14.9997 26.4924 13.5073 25 11.6663 25C9.82539 25 8.33301 26.4924 8.33301 28.3333C8.33301 30.1743 9.82539 31.6667 11.6663 31.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28.3333 31.6667C30.1743 31.6667 31.6667 30.1743 31.6667 28.3333C31.6667 26.4924 30.1743 25 28.3333 25C26.4924 25 25 26.4924 25 28.3333C25 30.1743 26.4924 31.6667 28.3333 31.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.33301 28.334H6.99967C5.8951 28.334 4.99967 27.4386 4.99967 26.334V21.6673M3.33301 8.33398H19.6663C20.7709 8.33398 21.6663 9.22941 21.6663 10.334V28.334M14.9997 28.334H24.9997M31.6663 28.334H32.9997C34.1042 28.334 34.9997 27.4386 34.9997 26.334V18.334M34.9997 18.334H21.6663M34.9997 18.334L30.5823 10.9717C30.2208 10.3692 29.5698 10.0007 28.8673 10.0007H21.6663" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 28H6.66667C5.5621 28 4.66667 27.1046 4.66667 26V21.3333M3 8H19.3333C20.4379 8 21.3333 8.89543 21.3333 10V28M15 28H24.6667M32 28H32.6667C33.7712 28 34.6667 27.1046 34.6667 26V18M34.6667 18H21.3333M34.6667 18L30.2493 10.6377C29.8878 10.0353 29.2368 9.66667 28.5343 9.66667H21.3333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 11.8184H11.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1.81836 15.4541H8.48503" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 19.0908H11.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_1_4752">
+      <rect width="40" height="40" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
                     <div>
                         <h5 className="font-semibold text-gray-800">Free Delivery</h5>
                         <p className="text-sm text-gray-500">Enter your postal code for Delivery availability</p>
@@ -117,7 +132,17 @@ const ProductInfo = ({ product }) => {
                 </div>
                 <hr className="my-2 border-gray-200" />
                 <div className="flex items-center">
-                    <img src="https://placehold.co/24x24/e5e7eb/374151?text=🔄" alt="Return Delivery Icon" className="mr-2" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  <g clip-path="url(#clip0_1_4757)">
+    <path d="M33.3337 18.3332C32.9261 15.4002 31.5654 12.6826 29.4614 10.599C27.3573 8.51539 24.6266 7.18137 21.6898 6.80242C18.753 6.42348 15.773 7.02064 13.209 8.50191C10.645 9.98319 8.63907 12.2664 7.50033 14.9998M6.66699 8.33317V14.9998H13.3337" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6.66699 21.667C7.07459 24.6 8.43521 27.3176 10.5393 29.4012C12.6433 31.4848 15.3741 32.8188 18.3109 33.1977C21.2477 33.5767 24.2276 32.9795 26.7917 31.4982C29.3557 30.017 31.3616 27.7338 32.5003 25.0003M33.3337 31.667V25.0003H26.667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_1_4757">
+      <rect width="40" height="40" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
                     <div>
                         <h5 className="font-semibold text-gray-800">Return Delivery</h5>
                         <p className="text-sm text-gray-500">Free 30 Days Delivery Returns. Details</p>
