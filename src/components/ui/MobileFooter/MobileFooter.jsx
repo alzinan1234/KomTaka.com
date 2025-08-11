@@ -60,17 +60,20 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <footer className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 md:hidden">
             <div className="grid h-full max-w-lg grid-cols-5 mx-auto">
-                <button onClick={toggleCart} className="relative">
-                            <ShoppingCart className="cursor-pointer" />
+                <button onClick={toggleCart} className="relative flex flex-col items-center justify-center  hover:bg-gray-50 group">
+                           <div>
+                             <ShoppingCart className="cursor-pointer w-16 pl-4" />
                             {cartItems.length > 0 && (
-                              <span className="absolute top-1 right-15 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                              <span className="absolute top-1 right-2  bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                                 {cartItems.length}
                               </span>
                             )}
+                           </div>
+                           <span className="text-xs text-center text-gray-500 group-hover:text-blue-600 pl-4">Cart</span>
                           </button>
                 <Link href="/shop" className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group">
                     <GridIcon />
-                    <span className="text-xs text-gray-500 group-hover:text-blue-600">Shop</span>
+                    <span className="text-xs text-gray-500 group-hover:text-blue-600 ">Shop</span>
                 </Link>
                 <div className="flex items-center justify-center">
                     <Link href="/" className="inline-flex items-center justify-center w-16 h-16 bg-white  -translate-y-6 shadow-lg hover:bg-gray-100 group focus:ring-4 focus:ring-blue-300 focus:outline-none border-2 border-[#D8D8D8] rounded-[110px]">
