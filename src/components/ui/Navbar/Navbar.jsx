@@ -8,6 +8,19 @@ import Cart from "@/components/home/Cart/Cart";
 import { useCart } from "@/components/home/Cart/CartContext";
 
 const Navbar = () => {
+  const [isBlur, setIsBlur] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsBlur(true);
+      } else {
+        setIsBlur(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -43,12 +56,12 @@ const Navbar = () => {
   const closeSearch = () => setIsSearchOpen(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-sm">
+  <nav className={`sticky top-0 z-50 bg-white px-2 sm:px-4 transition-all duration-300 ${isBlur ? 'backdrop-blur-md bg-white/80' : ''}` }>
       <div className="maxWidth mx-auto flex items-center justify-between h-16 ">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <Image src="/logo.png" alt="Logo" width={150} height={40} />
+            <Image className=" w-[120]  md:w-[150] " src="/logo.png" alt="Logo" width={150} height={40} />
           </Link>
         </div>
 
@@ -91,14 +104,7 @@ const Navbar = () => {
           <button onClick={toggleSearch}>
             <Search className="w-6 h-6 text-black" />
           </button>
-          <button onClick={toggleCart} className="relative">
-            <ShoppingCart className="cursor-pointer" />
-            {cartItems.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                {cartItems.length}
-              </span>
-            )}
-          </button>
+          {/* Hide cart icon on small devices */}
           <button onClick={toggleMenu}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -120,7 +126,7 @@ const Navbar = () => {
               id="mobile-search-input"
               type="text"
               placeholder="Search here for product"
-              className="w-full h-12 pl-4 pr-10 pr-16 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
+              className="w-full h-12 pl-4 pr-16 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
             />
             {/* Search icon */}
             <Search className="absolute right-10 top-1/2 -translate-y-1/2 text-black" />
