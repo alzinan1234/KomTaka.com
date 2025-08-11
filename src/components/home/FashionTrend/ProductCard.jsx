@@ -71,11 +71,11 @@ const ProductCard = () => {
                 </button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-start justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-start justify-center ">
                 {filteredProducts.map((product) => (
                     <div
                         key={product.id}
-                        className="group relative flex flex-col h-full bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+                        className=" md:w-64 p-4 mx-2 group relative flex flex-col h-full bg-white rounded-lg shadow hover:shadow-lg transition duration-300 transform hover:scale-105"
                     >
                         <div className="relative overflow-hidden">
                             {/* 4. Removed 'NEW' badge as 'isNew' property doesn't exist in new data */}
@@ -98,17 +98,17 @@ const ProductCard = () => {
                             />
                             
                             <button
-                                onClick={() => handleAddToCart(product)}
-                                className="absolute bottom-0 left-0 w-full bg-blue-600 text-white py-2 
-                                    translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 
-                                    transition-all duration-300 ease-in-out rounded-b-md"
-                            >
-                                <span>Add To Cart</span>
-                            </button>
+                                                                onClick={() => handleAddToCart(product)}
+                                                                className="absolute bottom-0 left-0 w-full bg-blue-600 text-white py-2 rounded-b-md transition-all duration-300 ease-in-out
+                                                                    opacity-100 translate-y-0
+                                                                    md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0"
+                                                        >
+                                                                <span>Add To Cart</span>
+                                                        </button>
                         </div>
                         
                         <div className="p-4 flex flex-col items-center flex-grow">
-                           <Link href={`/product/${product.id}`}> <h3 className="text-lg font-semibold text-center text-gray-800 mb-1 truncate w-full">{product.name}</h3></Link>
+                           <Link href={`/product/${product.id}`}> <h3 className="text-[16px] font-semibold text-center text-gray-800 mb-1 truncate w-full ">{product.name}</h3></Link>
                             <div className="flex items-center space-x-2 mb-2">
                                 <span className="text-blue-600 font-bold">৳{product.price.toFixed(2)}</span>
                                 {product.originalPrice && (

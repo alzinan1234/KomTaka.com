@@ -8,19 +8,7 @@ import Cart from "@/components/home/Cart/Cart";
 import { useCart } from "@/components/home/Cart/CartContext";
 
 const Navbar = () => {
-  const [isBlur, setIsBlur] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsBlur(true);
-      } else {
-        setIsBlur(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Removed scroll blur effect for navbar
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -56,12 +44,12 @@ const Navbar = () => {
   const closeSearch = () => setIsSearchOpen(false);
 
   return (
-  <nav className={`sticky top-0 z-50 bg-white px-2 sm:px-4 transition-all duration-300 ${isBlur ? 'backdrop-blur-md bg-white/80' : ''}` }>
+  <nav className="sticky top-0 z-50 bg-white px-2 sm:px-4 shadow-sm">
       <div className="maxWidth mx-auto flex items-center justify-between h-16 ">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center min-w-[120px] md:min-w-[150px]">
           <Link href="/">
-            <Image className=" w-[120]  md:w-[150] " src="/logo.png" alt="Logo" width={150} height={40} />
+            <Image className="w-[120px] md:w-[150px]" src="/logo.png" alt="Logo" width={150} height={40} />
           </Link>
         </div>
 
@@ -79,7 +67,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
-          <ul className="flex space-x-6 text-black">
+          <ul className="flex flex-wrap space-x-4 md:space-x-6 text-black">
             <li><Link href="/" className="hover:text-blue-500">Home</Link></li>
             <li><Link href="/shop" className="hover:text-blue-500">Shop</Link></li>
             <li><Link href="/about" className="hover:text-blue-500">About Us</Link></li>
@@ -88,7 +76,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <Heart className="cursor-pointer" />
             <User className="cursor-pointer" />
-            <button onClick={toggleCart} className="relative">
+            <button onClick={toggleCart} className="relative focus:outline-none" aria-label="Open cart">
               <ShoppingCart className="cursor-pointer" />
               {cartItems.length > 0 && (
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -104,7 +92,7 @@ const Navbar = () => {
           <button onClick={toggleSearch}>
             <Search className="w-6 h-6 text-black" />
           </button>
-          {/* Hide cart icon on small devices */}
+          {/* Cart icon hidden on small devices, but sidebar still works on desktop */}
           <button onClick={toggleMenu}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
