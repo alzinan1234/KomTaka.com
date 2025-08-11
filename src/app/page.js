@@ -10,6 +10,8 @@ import ScrollingBanner from "@/components/home/ScrollingBanner/ScrollingBanner";
 
 
 export default function Home() {
+
+  
   return (
     <div className="">
       <Carousel />

@@ -36,9 +36,11 @@ const ProductCard = ({ product }) => {
           <button className="p-2 bg-white rounded-full shadow-lg text-gray-700 hover:text-red-500">
             <Heart size={20} />
           </button>
+            <Link href={`/product/${product.id}`}>
           <button className="p-2 bg-white rounded-full shadow-lg text-gray-700 hover:text-blue-500">
             <Eye size={20} />
           </button>
+            </Link>
         </div>
         <img
           src={product.image}

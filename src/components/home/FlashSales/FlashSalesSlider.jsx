@@ -97,12 +97,16 @@ const FlashSalesSlider = () => {
                   </span>
                 )}
                 <div className="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                  
+                  
                   <button className="p-2 bg-white rounded-full shadow-lg text-gray-700 hover:text-red-500">
                     <Heart size={20} />
                   </button>
-                  <button className="p-2 bg-white rounded-full shadow-lg text-gray-700 hover:text-blue-500">
+                    <Link href={`/product/${product.id}`}>
+                  <button className="p-2 bg-white rounded-full shadow-lg text-gray-700 hover:text-blue-500 cursor-pointer">
                     <Eye size={20} />
                   </button>
+                    </Link>
                 </div>
                 <img
                   // 3. Handle both 'images' array and single 'image' property
