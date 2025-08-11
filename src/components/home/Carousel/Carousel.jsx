@@ -58,7 +58,7 @@ const Banner = () => {
   }, [emblaApi]);
 
   return (
-    <div className="relative overflow-hidden w-full h-[30vh]  md:h-[60vh]">
+    <div className="relative overflow-hidden w-full h-[30vh]  md:h-[80vh]">
       <div
         className="embla__viewport w-full h-full"
         ref={emblaRef}
