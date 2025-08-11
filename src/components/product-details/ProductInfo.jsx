@@ -30,7 +30,7 @@ const ProductInfo = ({ product }) => {
 
     return (
         <div className="flex-1">
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">{product.name}</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{product.name}</h1>
             <div className="flex items-center mb-4">
                 <div className="flex items-center text-yellow-400 mr-2">
                     {ratingStars}
@@ -41,7 +41,7 @@ const ProductInfo = ({ product }) => {
                     {product.inStock ? 'In Stock' : 'Out of Stock'}
                 </span>
             </div>
-            <div className="text-3xl font-bold text-gray-800 mb-4">
+            <div className="text-2xl md:text-3xlfont-bold text-gray-800 mb-4">
                 ৳{product.price.toFixed(2)}
                 {product.originalPrice && product.originalPrice > product.price && (
                     <span className="text-gray-400 line-through ml-2 text-xl">৳{product.originalPrice.toFixed(2)}</span>

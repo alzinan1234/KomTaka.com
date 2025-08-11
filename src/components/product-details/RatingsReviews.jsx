@@ -44,7 +44,7 @@ const RatingsReviews = ({ productId }) => {
 
     return (
         <div className="mt-12 bg-white p-6 rounded-lg shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">Ratings & Review</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-4">Ratings & Review</h2>
             {productReviews.length === 0 ? (
                 // Message when no reviews are available
                 <p className="text-gray-500">No reviews yet. Be the first to review this product!</p>

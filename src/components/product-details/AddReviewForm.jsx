@@ -36,7 +36,7 @@ const AddReviewForm = ({ productId }) => {
 
     return (
         <div className="mt-12 bg-white p-6 rounded-lg shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">Add Review</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-4">Add Review</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="mb-4">
                     <label htmlFor="reviewerName" className="block text-gray-700 text-sm font-bold mb-2">

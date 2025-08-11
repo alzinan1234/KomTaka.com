@@ -52,7 +52,7 @@ const RelatedItems = ({ currentProductId }) => {
 
     return (
         <div className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-4">Related Item</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-4">Related Item</h2>
             <div
                 className="relative overflow-hidden"
                 onMouseEnter={handleMouseEnter}

@@ -7,7 +7,7 @@ const NewArrival = () => {
       {/* Header section */}
       <div className="mb-8">
         <p className="text-blue-600 font-semibold mb-1">Featured</p>
-        <h2 className="text-4xl font-bold text-gray-900">New Arrival</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900">New Arrival</h2>
       </div>
 
       {/* Main grid layout */}

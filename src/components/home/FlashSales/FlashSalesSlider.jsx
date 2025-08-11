@@ -57,7 +57,7 @@ const FlashSalesSlider = () => {
             <div className="flex items-center justify-between mb-8">
                  <div className="">
         <p className="text-blue-600 font-semibold mb-5">Today’s</p>
-        <h2 className="text-4xl font-bold text-gray-900">Flash Sales</h2>
+        <h2 className=" text-2xl md:text-4xl font-bold text-gray-900">Flash Sales</h2>
       </div>
                 <div className="flex space-x-2">
                     <button onClick={prevSlide} className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors duration-200">

@@ -41,7 +41,7 @@ const ProductCard = () => {
         <div className="maxWidth mx-auto px-4 py-8 max-w-7xl font-sans">
             <div className="text-center mb-12">
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest">FASHION TREND, STYLE</p>
-                <h1 className="text-4xl font-bold text-gray-800 mt-2">WE SELL HAPPINESS AND DELIVER SMILES.</h1>
+                <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mt-2">WE SELL HAPPINESS AND DELIVER SMILES.</h1>
             </div>
 
             <div className="flex flex-col md:flex-row justify-center gap-4 items-center mb-8 space-y-4 md:space-y-0">
