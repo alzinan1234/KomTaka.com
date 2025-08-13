@@ -98,7 +98,7 @@ const CheckoutPage = () => {
             </div>
              <div className="flex items-center">
                 <input id="save-info" name="save-info" type="checkbox" className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
-                <label htmlFor="save-info" className="ml-2 block text-sm text-gray-900">Save this information for faster check-out next time</label>
+                <label htmlFor="save-info" className="ml-2 block text-[13px] md:text-sm text-gray-900">Save this information for faster check-out next time</label>
               </div>
           </div>
 

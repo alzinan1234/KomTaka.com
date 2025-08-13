@@ -59,7 +59,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search here for product"
-              className="w-full h-10 pl-4 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+              className="w-full h-10 pl-4 pr-10 rounded-full border border-gray-300 focus:outline-none  transition-all duration-200"
             />
             <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-black" />
           </div>
@@ -114,7 +114,7 @@ const Navbar = () => {
               id="mobile-search-input"
               type="text"
               placeholder="Search here for product"
-              className="w-full h-12 pl-4 pr-16 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
+              className="w-full h-12 pl-4 pr-16 rounded-full border border-gray-300 focus:outline-none  text-base"
             />
             {/* Search icon */}
             <Search className="absolute right-10 top-1/2 -translate-y-1/2 text-black" />
