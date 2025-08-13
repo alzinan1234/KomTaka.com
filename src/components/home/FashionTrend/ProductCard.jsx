@@ -107,12 +107,14 @@ const ProductCard = () => {
                 }}
               />
 
-              <button
+             <div className=" flex items-center justify-center ">
+               <button
                 onClick={() => handleAddToCart(product)}
-                className="absolute bottom-0 left-0 w-full bg-blue-600 text-white py-2 rounded-b-md transition-all duration-300 ease-in-out opacity-100 translate-y-0    md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0"
+                className="absolute bottom-0  flex items-center justify-center mx-auto w-[200] md:w-full bg-blue-600 text-white py-2 rounded-b-md transition-all duration-300 ease-in-out opacity-100 translate-y-0    md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0"
               >
                 <span>Add To Cart</span>
               </button>
+             </div>
             </div>
 
             <div className="p-4 flex flex-col items-center flex-grow">
