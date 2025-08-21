@@ -25,10 +25,10 @@ const ProductCard = ({ product }) => {
   ));
 
   return (
-    <div className="group md:w-70 p-4 mx-2 relative bg-white rounded-lg shadow hover:shadow-lg transition duration-300">
+    <div className="group w-full sm:w-auto p-2 sm:p-4 mx-0 sm:mx-2 relative bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
       <div className="relative overflow-hidden">
         {product.isNew && (
-          <span className="absolute top-2 left-2 px-3 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full z-10">
+          <span className="absolute top-2 left-2 px-2 sm:px-3 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full z-10">
             NEW
           </span>
         )}
@@ -36,16 +36,16 @@ const ProductCard = ({ product }) => {
           <button className="p-2 bg-white rounded-full shadow-lg text-gray-700 hover:text-red-500">
             <Heart size={20} />
           </button>
-            <Link href={`/product/${product.id}`}>
-          <button className="p-2 bg-white rounded-full shadow-lg text-gray-700 hover:text-blue-500">
-            <Eye size={20} />
-          </button>
-            </Link>
+          <Link href={`/product/${product.id}`}>
+            <button className="p-2 bg-white rounded-full shadow-lg text-gray-700 hover:text-blue-500">
+              <Eye size={20} />
+            </button>
+          </Link>
         </div>
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-48 object-cover rounded-md"
+          className="w-full h-32 sm:h-48 object-cover rounded-md"
           onError={(e) => {
             e.target.src =
               "https://placehold.co/400x300/e5e7eb/374151?text=Image+Not+Found";
@@ -54,27 +54,27 @@ const ProductCard = ({ product }) => {
 
         <button
           onClick={handleAddToCart}
-          className="absolute bottom-0 left-0 w-full bg-blue-600 text-white py-2 rounded-b-md transition-all duration-300 ease-in-out opacity-100 translate-y-0 md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0"
+          className="absolute bottom-0 left-0 w-full bg-blue-600 text-white py-2 rounded-b-md transition-all duration-300 ease-in-out opacity-100 translate-y-0 md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0 text-xs sm:text-base"
         >
           Add To Cart
         </button>
       </div>
 
-      <div className="p-4 flex flex-col items-center text-center">
+      <div className="p-2 sm:p-4 flex flex-col items-center text-center flex-1">
         <Link href={`/product/${product.id}`}>
-          <h3 className="text-lg font-semibold text-gray-800 mb-1 truncate w-full">
+          <h3 className="text-xs sm:text-sm md:text-lg font-semibold text-gray-800 mb-1 truncate w-full">
             {product.name}
           </h3>
         </Link>
         <div className="flex items-center space-x-2 mb-2">
-          <span className="text-blue-600 font-bold">৳{product.price}</span>
-          <span className="text-gray-400 line-through">
+          <span className="text-blue-600 font-bold text-xs sm:text-base">৳{product.price}</span>
+          <span className="text-gray-400 line-through text-xs sm:text-base">
             ৳{product.originalPrice}
           </span>
         </div>
         <div className="flex items-center text-yellow-400">
           {ratingStars}
-          <span className="ml-2 text-sm text-gray-500">
+          <span className="ml-2 text-xs sm:text-sm text-gray-500">
             ({product.reviews})
           </span>
         </div>

@@ -51,10 +51,10 @@ const Sidebar = ({ setFilteredProducts }) => {
     };
 
     return (
-        <div className="w-full md:w-64 p-4 border-r border-gray-200">
+        <div className="w-full md:w-64 p-2 sm:p-4 border-r border-gray-200 bg-white">
             {/* Collection Filter */}
-            <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4 border-b pb-2">COLLECTION</h3>
+            <div className="mb-6 sm:mb-8">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 border-b pb-2">COLLECTION</h3>
                 <ul className="space-y-2">
                     {collections.map(collection => (
                         <li key={collection} className="flex items-center space-x-2">
@@ -74,8 +74,8 @@ const Sidebar = ({ setFilteredProducts }) => {
             </div>
 
             {/* Price Filter with input fields and a react-range slider */}
-            <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4 border-b pb-2">PRICE RANGE</h3>
+            <div className="mb-6 sm:mb-8">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 border-b pb-2">PRICE RANGE</h3>
                 <div className="flex flex-col items-center">
                     <Range
                         step={STEP}
@@ -129,28 +129,28 @@ const Sidebar = ({ setFilteredProducts }) => {
                             </div>
                         )}
                     />
-                    <div className="flex items-center space-x-2 mt-4">
+                    <div className="flex items-center space-x-2 mt-4 w-full">
                         <input
                             type="number"
                             value={priceRange[0]}
                             onChange={(e) => handlePriceInputChange(0, e.target.value)}
-                            className="w-1/2 p-2 border border-gray-300 rounded"
+                            className="w-1/2 p-2 border border-gray-300 rounded text-xs sm:text-sm"
                         />
                         <span>-</span>
                         <input
                             type="number"
                             value={priceRange[1]}
                             onChange={(e) => handlePriceInputChange(1, e.target.value)}
-                            className="w-1/2 p-2 border border-gray-300 rounded"
+                            className="w-1/2 p-2 border border-gray-300 rounded text-xs sm:text-sm"
                         />
                     </div>
                 </div>
             </div>
 
             {/* Color Filter */}
-            <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4 border-b pb-2">COLOR</h3>
-                <div className="grid grid-cols-2 gap-2">
+            <div className="mb-6 sm:mb-8">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 border-b pb-2">COLOR</h3>
+                <div className="grid grid-cols-3 sm:grid-cols-2 gap-2">
                     {colors.map(color => (
                         <div key={color} className="flex items-center space-x-2 cursor-pointer" onClick={() => handleColorChange(color)}>
                             <button
@@ -159,7 +159,7 @@ const Sidebar = ({ setFilteredProducts }) => {
                                 style={{ backgroundColor: color.toLowerCase() }}
                                 aria-label={`Filter by ${color}`}
                             />
-                            <span className="text-sm text-gray-700">{color}</span>
+                            <span className="text-xs sm:text-sm text-gray-700">{color}</span>
                         </div>
                     ))}
                 </div>
