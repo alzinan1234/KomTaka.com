@@ -62,7 +62,7 @@ const ProductCard = ({ product }) => {
 
       <div className="p-2 sm:p-4 flex flex-col items-center text-center flex-1">
         <Link href={`/product/${product.id}`}>
-          <h3 className="text-xs sm:text-sm md:text-lg font-semibold text-gray-800 mb-1 truncate w-full">
+          <h3 className="text-[10px] sm:text-sm md:text-[15] font-semibold text-gray-800 mb-1 truncate w-full">
             {product.name}
           </h3>
         </Link>

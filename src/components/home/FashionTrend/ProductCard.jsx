@@ -40,7 +40,7 @@ const ProductCard = () => {
   }, [activeFilter]);
 
   return (
-    <div className="maxWidth mx-auto px-4 py-8 max-w-7xl font-sans">
+  <div className="max-w-screen-xl mx-auto px-2 sm:px-4 py-4 sm:py-8 font-sans">
       <div className="text-center mb-12">
         <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest">
           FASHION TREND, STYLE
@@ -50,7 +50,7 @@ const ProductCard = () => {
         </h1>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center gap-4 items-center mb-8 space-y-4 md:space-y-0">
+      <div className="flex flex-col md:flex-row justify-center gap-2 sm:gap-4 items-center mb-6 sm:mb-8 space-y-2 md:space-y-0">
         <div className="flex flex-wrap justify-center items-center gap-2">
           {uniqueCategories.map((category) => (
             <button
@@ -78,11 +78,11 @@ const ProductCard = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-start justify-center ">
+  <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 items-start justify-center ">
         {filteredProducts.map((product) => (
           <div
             key={product.id}
-            className=" md:w-64 p-4 mx-2 group relative flex flex-col h-full bg-white rounded-lg shadow hover:shadow-lg transition duration-300 transform hover:scale-105"
+            className="w-full sm:w-auto p-2 sm:p-4 mx-0 sm:mx-2 group relative flex flex-col h-full bg-white rounded-lg shadow hover:shadow-lg transition duration-300 transform hover:scale-105"
           >
             <div className="relative overflow-hidden">
               {/* 4. Removed 'NEW' badge as 'isNew' property doesn't exist in new data */}
@@ -100,36 +100,34 @@ const ProductCard = () => {
               <img
                 src={product.images ? product.images[0] : product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover rounded-t-md"
+                className="w-full h-32 sm:h-48 object-cover rounded-t-md"
                 onError={(e) => {
                   e.target.src =
                     "https://placehold.co/400x300/e5e7eb/374151?text=Image+Not+Found";
                 }}
               />
 
-             <div className=" flex items-center justify-center ">
-               <button
+              <button
                 onClick={() => handleAddToCart(product)}
-                className="absolute bottom-0  flex items-center justify-center mx-auto w-[200] md:w-full bg-blue-600 text-white py-2 rounded-b-md transition-all duration-300 ease-in-out opacity-100 translate-y-0    md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0"
+                className="absolute bottom-0 left-0 w-full bg-blue-600 text-white py-2 rounded-b-md transition-all duration-300 ease-in-out text-xs sm:text-base opacity-100 translate-y-0 md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0"
               >
                 <span>Add To Cart</span>
               </button>
-             </div>
             </div>
 
-            <div className="p-4 flex flex-col items-center flex-grow">
+            <div className="p-2 sm:p-4 flex flex-col items-center flex-grow">
               <Link href={`/product/${product.id}`}>
                 {" "}
-                <h3 className="text-[16px] font-semibold text-center text-gray-800 mb-1 truncate w-full ">
+                <h3 className="text-xs sm:text-sm md:text-base font-semibold text-center text-gray-800 mb-1 truncate w-full ">
                   {product.name}
                 </h3>
               </Link>
               <div className="flex items-center space-x-2 mb-2">
-                <span className="text-blue-600 font-bold">
+                <span className="text-blue-600 font-bold text-xs sm:text-base">
                   ৳{product.price.toFixed(2)}
                 </span>
                 {product.originalPrice && (
-                  <span className="text-gray-400 line-through">
+                  <span className="text-gray-400 line-through text-xs sm:text-base">
                     ৳{product.originalPrice.toFixed(2)}
                   </span>
                 )}
@@ -138,7 +136,7 @@ const ProductCard = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    size={16}
+                    size={14}
                     fill={
                       i < Math.floor(product.rating) ? "currentColor" : "none"
                     }
@@ -149,7 +147,7 @@ const ProductCard = () => {
                     }
                   />
                 ))}
-                <span className="ml-2 text-sm text-gray-500">
+                <span className="ml-2 text-xs sm:text-sm text-gray-500">
                   ({product.reviews})
                 </span>
               </div>
