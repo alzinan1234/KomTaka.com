@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
   ));
 
   return (
-    <div className="group w-full sm:w-auto p-2 sm:p-4 mx-0 sm:mx-2 relative bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
+    <div className="group w-full md:h-full sm:w-auto p-2 sm:p-4 mx-0 sm:mx-2 relative bg-white rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col">
       <div className="relative overflow-hidden">
         {product.isNew && (
           <span className="absolute top-2 left-2 px-2 sm:px-3 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full z-10">
@@ -45,7 +45,7 @@ const ProductCard = ({ product }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-32 sm:h-48 object-cover rounded-md"
+          className="w-full h-32 sm:h-38 object-cover rounded-md"
           onError={(e) => {
             e.target.src =
               "https://placehold.co/400x300/e5e7eb/374151?text=Image+Not+Found";

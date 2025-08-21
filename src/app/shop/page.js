@@ -4,8 +4,9 @@
 import { useState, useEffect } from "react";
 import { Filter } from "lucide-react";
 import allProducts from "@/data/AllProductsData";
-import Sidebar from "@/components/shop/Sidebar";
-import ProductCard from "@/components/shop/ProductCard";
+import Sidebar from "../../components/Shop/Sidebar.jsx";
+import ProductCard from "../../components/Shop/ProductCard.jsx";
+
 
 const ShopPage = () => {
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
