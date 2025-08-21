@@ -36,9 +36,7 @@ const ShopPage = () => {
 
           {/* Sidebar - hidden on mobile, drawer toggle */}
           <div
-            className={`fixed inset-0 z-50  bg-opacity-30 transition-opacity duration-300 
-            ${isSidebarOpen ? "opacity-100 visible" : "opacity-0 invisible"} 
-            md:relative md:opacity-100 md:visible md:bg-transparent`}
+            className={`fixed inset-0 z-50 transition-opacity duration-300 ${isSidebarOpen ? "backdrop-blur-sm  bg-opacity-30 opacity-100 visible" : "opacity-0 invisible"} md:relative md:opacity-100 md:visible md:bg-transparent`}
             onClick={() => setIsSidebarOpen(false)}
           >
             <div
@@ -50,7 +48,7 @@ const ShopPage = () => {
               <Sidebar setFilteredProducts={setFilteredProducts} />
 
               {/* Close button only on mobile */}
-              <div className="md:hidden absolute top-4 right-4">
+              <div className="md:hidden absolute top-2 right-4">
                 <button
                   onClick={() => setIsSidebarOpen(false)}
                   className="px-3 py-1 text-sm bg-gray-200 rounded"
